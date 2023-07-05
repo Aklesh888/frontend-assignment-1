@@ -20,7 +20,7 @@ export default function Home() {
     <main className="">
       <div className="flex flex-wrap items-center justify-center">
         {data.map((item) => (
-          <ItemsCard key={item.id} img={item.image} item={item} 
+          <ItemsCard key={item.id} id={item.id} img={item.image} item={item} 
           name={item.title}/>
         ))}
         {status === "error" && <p>Error fetching data</p>}

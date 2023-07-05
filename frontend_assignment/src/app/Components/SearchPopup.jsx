@@ -38,12 +38,10 @@ const SearchPopup = () => {
     const titleMatch = item.title
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
-    const categoryMatch =
-      selectedCategory === "" || item.category === selectedCategory;
     const priceMatch =
       (minPrice === "" || item.price >= minPrice) &&
       (maxPrice === "" || item.price <= maxPrice);
-    return titleMatch && categoryMatch && priceMatch;
+    return titleMatch  && priceMatch;
   });
 
   return (
@@ -104,6 +102,8 @@ const SearchPopup = () => {
                 title={item.title}
                 price={item.price}
                 category={item.category}
+                image={item.image}
+                id={item.id}
               />
             </div>
           ))}

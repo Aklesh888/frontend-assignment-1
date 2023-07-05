@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import SearchUI from './Components/Search';
 import './globals.css';
 import Link from 'next/link';
+import {ShoppingCart} from 'react-feather'
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,9 +22,10 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <head></head>
         <body className={inter.className}>
-        <div className="flex justify-between py-5 mx-48 max-h-[96px]">
+        <div className="flex justify-between py-5 bg-zinc-600 lg:px-36 px-4 max-h-[96px]">
             <div className="flex items-center">
-              <Link href='/' className="text-4xl text-center h-[30px]">Ecommerce App</Link>
+              <ShoppingCart size={40} className='m-2'/>
+              <Link href='/' className="md:text-3xl text-2xl text-center h-[30px] ">Ecommerce App</Link>
             </div>
             <div>
               <SearchUI/>
