@@ -9,10 +9,6 @@ import {ShoppingCart} from 'react-feather'
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = {
-  title: 'Ecommerce App',
-  description: '',
-};
 
 const queryClient = new QueryClient();
 
