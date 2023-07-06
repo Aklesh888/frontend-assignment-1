@@ -16,21 +16,21 @@ const SearchResult = (props) => {
 
   console.log(product);
   return (
-    <div className="flex flex-col justify-center items-center my-8">
-      <div className="flex lg:flex-row flex-col justify-center">
+    <div className="flex flex-col justify-center items-center my-8 px-5 space-y-5">
+      <div className="flex lg:flex-row flex-col justify-center items-center space-x-5">
         <img
           src={product.image}
-          className=" md:h-[500px] md:w-[500px] h-auto w-auto m-5 rounded"
+          className=" md:h-[450px] md:w-[450px] h-[300px] w-[300px] rounded mx-3"
           alt=""
         />
-        <div className="w-[600px] space-y-5 flex flex-col">
-          <div className="md:text-4xl sm:text-2xl font-extrabold">
+        <div className="w-[600px] space-y-8 flex flex-col">
+          <div className="md:text-4xl sm:text-3xl text-xl font-extrabold">
             {product.title}
           </div>
-          <div className="my-2 md:text-xl text-sm font-semibold">
+          <div className="my-2 md:text-xl text-lg font-semibold">
             Category: {product.category}
           </div>
-          <div className="my-2 md:text-xl text-sm text-zinc-400">
+          <div className="my-2 md:text-xl text-lg text-zinc-400">
             {product.description}
           </div>
           <div className="text-xl">Price: ${product.price}</div>
