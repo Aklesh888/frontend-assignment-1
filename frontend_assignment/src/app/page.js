@@ -42,8 +42,8 @@ export default function Home() {
           className="border h-16 w-[400px] text-2xl border-gray-300 rounded-md p-2 focus:outline-none text-black m-5 justify-self-end"
         >
           <option value="">All Categories</option>
-          <option value="men's clothing">Men's Clothing</option>
-          <option value="women's clothing">Women's Clothing</option>
+          <option value="mens clothing">Men's Clothing</option>
+          <option value="womens clothing">Women's Clothing</option>
           <option value="electronics">Electronics</option>
           <option value="jewelry">Jewelry</option>
         </select>
