@@ -9,7 +9,6 @@ import { Loader } from "react-feather";
 const SearchPopup = () => {
   const { data, status } = useQuery("items", fetchItems);
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [showResults, setShowResults] = useState(false);
@@ -19,7 +18,10 @@ const SearchPopup = () => {
   }, [searchTerm]);
 
   if (status === "loading") {
-    return <Loader className="animate-spin" color="white" size={40} />;
+    return <div className="h-full flex flex-col justify-center items-center">
+
+      <Loader className="animate-spin self-center" color="white" size={40}/>
+    </div>
   }
 
   const handleOpacity = () => {
@@ -45,7 +47,7 @@ const SearchPopup = () => {
   });
 
   return (
-    <div className="flex h-92 rounded-md w-[1200px] flex-col bg-white transition-all text-gray-700 m-10">
+    <div className="flex h-92 rounded-md flex-col bg-white transition-all text-gray-700 m-10">
       <div
         className={`px-4 m-4 h-12 md:w-[65vw] w-[90vw] flex justify-between rounded border border-blue-400`}
       >
